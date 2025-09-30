@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './by-contry-page.html',
 })
-export default class ByContryPage {
+export class ByContryPage {
 
 }

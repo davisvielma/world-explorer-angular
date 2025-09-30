@@ -1,0 +1,14 @@
+<div class="dropdown dropdown-end">
+  <div tabindex="0" role="button" class="btn m-1">
+    Tema
+    <lucide-icon [img]="ChevronDown" size="14" strokeWidth="2" class="opacity-90" />
+  </div>
+  <ul tabindex="0" class="dropdown-content bg-base-300 rounded-box z-1 w-52 p-2 shadow-2xl space-y-1 py-2">
+    @for (theme of themes; track theme) {
+    <li>
+      <input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+        [aria-label]="theme" [value]="theme.toLowerCase()" />
+    </li>
+    }
+  </ul>
+</div>

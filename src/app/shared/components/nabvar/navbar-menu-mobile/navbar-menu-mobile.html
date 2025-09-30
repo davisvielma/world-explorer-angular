@@ -1,0 +1,13 @@
+<div class="dropdown dropdown-center block lg:hidden">
+  <div tabindex="0" role="button" class="btn m-1">
+    <lucide-icon [img]="Menu" size="16" strokeWidth="2" />
+  </div>
+  <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-2xl space-y-1">
+    @for (link of links(); track link.label) {
+    <li>
+      <a [routerLink]="link.path" routerLinkActive="btn-active"
+        class="btn btn-sm btn-block btn-ghost justify-start py-2">{{link.label | titlecase}}</a>
+    </li>
+    }
+  </ul>
+</div>
