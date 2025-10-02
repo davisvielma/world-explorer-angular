@@ -1,4 +1,8 @@
-<app-nabvar />
-<main class="flex grow max-w-7xl mx-auto py-4 px-3 sm:px-6">
-  <router-outlet />
+<main class="flex flex-col grow min-h-screen">
+  <app-nabvar />
+  <div class="max-w-7xl mx-auto py-4 px-3 sm:px-6 w-full">
+    <router-outlet />
+  </div>
+  <div class="flex-1 flex-grow"></div>
+  <app-footer />
 </main>
