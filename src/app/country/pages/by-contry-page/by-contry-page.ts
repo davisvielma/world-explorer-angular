@@ -38,7 +38,7 @@ export class ByContryPage {
         .pipe(
           tap(() => this.errorCountry.set(null)),
           catchError(() => {
-            this.errorCountry.set(`No se encontró un país con esa capital: ${params.query}`);
+            this.errorCountry.set(`No se encontro un pais con ese nombre: ${params.query}`);
             return of([]);
           })
         )

@@ -1,1 +1,19 @@
-<p>by-region-page works!</p>
+<div class="flex flex-col gap-3 w-full">
+  <app-pages-titles title="Por region" subtitle="Seleccione una region" />
+  <section class="row mt-2">
+    <div class="flex-col">
+      @for (region of regions; track region) {
+      <button class="btn btn-outline mr-2 w-[100px]" (click)="selectRegion(region)"
+        [class.btn-primary]="selectedRegion() === region">
+        {{region}}
+      </button>
+      }
+    </div>
+  </section>
+  <country-list
+    [countries]="countryResource.value() || []"
+    [errorMessage]="errorMessage()"
+    [isLoading]="countryResource.isLoading()"
+    [isEmpty]="countryResource.value().length === 0"
+  />
+</div>
