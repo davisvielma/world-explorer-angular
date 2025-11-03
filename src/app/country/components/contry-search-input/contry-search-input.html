@@ -1,25 +1,5 @@
 <section class="flex gap-2 mt-2">
-  <!-- <input
-    type="text"
-    [placeholder]="placeholder()"
-    autofocus
-    class="input input-bordered mr-2 w-56"
-    #txtSearch
-    (keyup.enter)="value.emit(txtSearch.value)"
-    (keyup)="inputValue.set(txtSearch.value)"
-    [value]="initialValue()"
-  >
-  <button class="btn btn-primary" (click)="value.emit(txtSearch.value)">Buscar</button> -->
-  <input
-    type="text"
-    [placeholder]="placeholder()"
-    autofocus
-    class="input input-bordered mr-2 w-52"
-    #txtSearch
-  >
-  <button
-    class="btn btn-primary"
-  >
-    Buscar
-  </button>
+  <input type="text" [placeholder]="placeholder()" autofocus class="input input-bordered mr-2 w-56" #txtSearch
+    (keyup.enter)="value.emit(txtSearch.value)" (keyup)="inputValue.set(txtSearch.value)" [value]="initialValue()">
+  <button class="btn btn-primary" (click)="value.emit(txtSearch.value)">Buscar</button>
 </section>

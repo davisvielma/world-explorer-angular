@@ -1,5 +1,5 @@
 <div class="flex flex-col gap-3 w-full">
   <app-pages-titles title="Por capital" />
-  <contry-search-input placeholder="Buscar por capital" />
+  <contry-search-input placeholder="Buscar por capital" (value)="query.set($event)" [initialValue]="query()" />
   <country-list />
 </div>
