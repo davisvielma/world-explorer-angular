@@ -4,10 +4,11 @@
     <lucide-icon [img]="ChevronDown" size="14" strokeWidth="2" class="opacity-90" />
   </div>
   <ul tabindex="0" class="dropdown-content bg-base-300 rounded-box z-1 w-52 p-2 shadow-2xl space-y-1 py-2">
-    @for (theme of themes; track theme) {
+    @for (theme of this.themeService.availableThemes; track theme) {
     <li>
       <input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-        [aria-label]="theme" [value]="theme.toLowerCase()" />
+        [aria-label]="theme | titlecase" [value]="theme" [checked]="this.themeService.currentTheme() === theme" [class.btn-active]="this.themeService.currentTheme()"
+        (change)="onThemeChange($event.target.value)" />
     </li>
     }
   </ul>

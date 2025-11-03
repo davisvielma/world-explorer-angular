@@ -1,1 +1,1 @@
-export const THEMES = ['Light', 'Dark', 'Cupcake', 'Sunset']
+export const THEMES = ['light', 'dark', 'cupcake', 'sunset', 'corporate', 'synthwave']
