@@ -20,7 +20,7 @@
       </tr>
       }
 
-      @if (errorMessage()) {
+      @if (errorMessage() && !isLoading()) {
       <tr>
         <td colspan="8" class="text-center py-5 text-lg font-medium">
           {{errorMessage()}}

@@ -37,7 +37,7 @@ export class ByCapitalPage {
       return this.contryService.searchByCapital(params.query)
         .pipe(
           tap(() => this.errorCountry.set(null)),
-          catchError((err) => {
+          catchError(() => {
             this.errorCountry.set(`No se encontró un país con esa capital: ${params.query}`);
             return of([]);
           })
@@ -47,5 +47,5 @@ export class ByCapitalPage {
 
   errorMessage = computed(() => {
     return this.errorCountry() || this.countryResource.error();
-  });
+  })
 }
