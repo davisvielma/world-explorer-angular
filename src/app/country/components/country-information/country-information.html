@@ -7,27 +7,34 @@
 
 <section class="stats shadow mx-5 flex flex-col md:flex-row">
   <div class="stat place-items-center">
-    <div class="stat-title">Población</div>
-    <div class="stat-value">{{ country().population | number }}</div>
-    <div class="stat-desc">Desde {{ currentYear() }}</div>
+    <p class="stat-title">Población</p>
+    <p class="stat-value">{{ country().population | number }}</p>
+    <p class="stat-desc">Desde {{ currentYear() }}</p>
   </div>
 
   <div class="stat place-items-center">
-    <div class="stat-title">Nombre</div>
-    <div class="stat-value text-primary">{{ country().name }}</div>
-    <div class="stat-desc text-primary">{{ country().region }}</div>
+    <p class="stat-title">Nombre</p>
+    <p class="stat-value text-primary">{{ country().name }}</p>
+    <p class="stat-desc text-primary">{{ country().region }}</p>
   </div>
 
   <div class="stat place-items-center">
-    <div class="stat-title">Sub Region</div>
-    <div class="stat-value">{{ country().subRegion }}</div>
-    <div class="stat-desc">{{ country().region }}</div>
+    <p class="stat-title">Sub Region</p>
+    <p class="stat-value">{{ country().subRegion }}</p>
+    <p class="stat-desc">{{ country().region }}</p>
   </div>
 
   <div class="stat place-items-center">
-    <div class="stat-title">Bandera</div>
-    <div class="stat-value">{{ country().flag }}</div>
-    <div class="stat-desc">{{ country().subRegion }}</div>
+    <p class="stat-title">Bandera</p>
+    <p class="stat-value">{{ country().flag }}</p>
+    <p class="stat-desc">{{ country().subRegion }}</p>
+  </div>
+
+  <div class="stat place-items-center">
+    <p class="stat-title">Favorito</p>
+    <button (click)="this.favoritesServices.toggleFavoriteCountry(this.country())">
+      <lucide-angular [img]="HeartIcon" class="size-8 hover:text-red-700 hover:fill-red-700" [class.text-red-700]="this.isFavorite()" />
+    </button>
   </div>
 </section>
 
