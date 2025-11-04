@@ -12,7 +12,7 @@ export class FavoritesService {
     return savedFavoriteCountries ? JSON.parse(savedFavoriteCountries) : []
   }
 
-  favoriteCountries = signal<Country[]>(this.getInitialFavoriteCountries())
+  private favoriteCountries = signal<Country[]>(this.getInitialFavoriteCountries())
 
   private saveToLocalStorage = (countries: Country[]) => {
     localStorage.setItem(this.storageKey, JSON.stringify(countries));
@@ -39,4 +39,7 @@ export class FavoritesService {
     this.favoriteCountries.set(updatedFavorites);
     this.saveToLocalStorage(updatedFavorites);
   }
+
+  favoriteCountriesList = () => this.favoriteCountries()
+
 }

@@ -1,0 +1,36 @@
+<div class="flex flex-col gap-3 w-full">
+  <app-pages-titles title="Favoritos" />
+
+  @if(this.favoritesCountries.length === 0) {
+    <p class="text-center text-xl mt-10 font-medium">No tienes países favoritos aún.</p>
+  } @else {
+    <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-auto justify-items-center gap-8">
+      @for (country of this.favoritesCountries; track country.cca2) {
+        <div class="card bg-base-100 w-60 shadow-sm">
+          <figure class="w-full min-h-36">
+            <img [src]="country.flagSvg" [alt]="country.name" class="w-full h-36 object-cover" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">{{country.name}}</h2>
+            <div class="flex flex-col gap-1">
+              <p class="font-medium">Capital: {{country.capital}}</p>
+              <p class="font-medium">Población: {{country.population | number}}</p>
+            </div>
+            <div class="card-actions justify-end flex-1 items-end">
+              <a class="link-primary cursor-pointer" [routerLink]="['/country/by', country.cca2]">
+                Mas informacion
+              </a>
+            </div>
+          </div>
+        </div>
+      }
+    </section>
+  }
+
+  <!-- <country-list
+    [countries]="countryResource.value() || []"
+    [errorMessage]="errorMessage()"
+    [isLoading]="countryResource.isLoading()"
+    [isEmpty]="countryResource.value().length === 0"
+  /> -->
+</div>
