@@ -1,59 +1,52 @@
-# WorldExplorer
+# 🌍 World Explorer - Angular Application
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.6.
+[![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)](https://angular.io/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 
-## Development server
+Una aplicación moderna y responsive desarrollada en Angular para explorar información detallada de países alrededor del mundo, con una interfaz de usuario intuitiva y características avanzadas.
 
-To start a local development server, run:
+## 🚀 Demo en Vivo
 
-```bash
-ng serve
-```
+**🔗 URL de la aplicación:** [https://world-explorer-angular.vercel.app/](https://world-explorer-angular.vercel.app/)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## ✨ Características Destacadas
 
-## Code scaffolding
+### 🎯 Funcionalidades Principales
+- **🔍 Búsqueda Avanzada** - Busca países por nombre y por capital con resultados en tiempo real
+- **🌐 Filtros por Región** - Filtra países por continente (África, América, Asia, Europa, Oceanía)
+- **📱 Diseño Responsive** - Experiencia optimizada para desktop, tablet y móvil
+- **🎨 Modo Oscuro/Claro** - Toggle para cambiar entre temas según preferencia del usuario
+- **🇺🇳 Detalles Completos** - Información detallada de cada país (población, capital, etc.)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### 💡 Características Técnicas
+- **Carga Optimizada** - Implementación eficiente de lazy loading y optimización de imágenes
+- **Gestión de Estado** - Manejo robusto del estado de la aplicación
+- **UI/UX Moderna** - Interfaz limpia y experiencia de usuario intuitiva
+- **Performance** - Código optimizado para rápida carga y respuesta
 
-```bash
-ng generate component component-name
-```
+## 🛠️ Tecnologías Utilizadas
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Frontend Framework
+- **Angular 20+** - Framework principal con las últimas características
+- **TypeScript** - Tipado estático para mayor robustez
+- **RxJS** - Programación reactiva y manejo de streams de datos
 
-```bash
-ng generate --help
-```
+### Styling & UI
+- **Tailwind CSS** - Para utilizar estilos personalizados
+- **DaisyUI** - Para proporcinar los temas y componentes
+- **Design System** - Componentes consistentes y reutilizables
 
-## Building
+### Deployment & Tools
+- **Vercel** - Plataforma de deployment automático
+- **Git** - Control de versiones
+- **REST Countries API** - Fuente de datos confiable
 
-To build the project run:
+## 🏗️ Arquitectura del Proyecto
 
-```bash
-ng build
-```
+## 👨‍💻 Autor
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+### **Davis Vielma**
+- 💼 LinkedIn: [davisvielma](https://www.linkedin.com/in/davisvielma)
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### ⭐ ¿Te gustó el proyecto? Dale una estrella al repositorio!
